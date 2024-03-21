@@ -1,0 +1,4 @@
+1-> make a npm i 
+2-> change the databases name according to you wish and do npx sequelize db:create  so directly a database is created
+    and you can directly start a project
+3-> run the project 

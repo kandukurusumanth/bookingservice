@@ -9,4 +9,6 @@ async function check(req,res){
         throw error
     }
 }
-module.exports={check}
+module.exports={
+    check
+}

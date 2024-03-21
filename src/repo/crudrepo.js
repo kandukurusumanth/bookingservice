@@ -1,5 +1,4 @@
-const { response } = require("express");
-const { error } = require("../utils/common/sucess_response");
+
 
 class CrudRepository{
    
@@ -18,7 +17,7 @@ class CrudRepository{
         
         
         if(!response){
-            throw new AppError("the creating   you are doing is out of bounce", StatusCodes.NOT_FOUND);
+            throw new Error ('wrong ')
         } 
         return response;
         
