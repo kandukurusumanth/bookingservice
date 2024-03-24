@@ -23,12 +23,12 @@ module.exports = {
       },
       seats: {
         type: Sequelize.ENUM(['ECONOMY','BUSINESS']),
-
-        allowNull: false,
+        defaultValue:"ECONOMY",
+        
       },
       totalcost: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        
       },
       createdAt: {
         allowNull: false,

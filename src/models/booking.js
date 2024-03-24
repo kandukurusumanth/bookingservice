@@ -30,12 +30,13 @@ module.exports = (sequelize, DataTypes) => {
 
     seats:{
       type: DataTypes.ENUM(['ECONOMY','BUSINESS']),
-      allowNull: false,
+     
+      defaultValue:'ECONOMY',
     },
 
     totalcost: {
       type:DataTypes.INTEGER,
-      allowNull: false,
+     
     },
   }, {
     sequelize,

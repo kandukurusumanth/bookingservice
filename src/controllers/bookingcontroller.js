@@ -8,14 +8,16 @@ async function createbookingcontroller(req,res){
             flightid:req.body.flightid,
             userid :req.body.userid,
             noofseats :req.body.noofseats,
-            seats:req.body.seats,
-            totalcost :req.body.totalcost
+            
+            
         })
+        
         sucessresponse.data=booking
         return res.json({
             sucessresponse
         })
     } catch (error) {
+        errorresponse.error=error.message
         res.json({
             errorresponse
         })
