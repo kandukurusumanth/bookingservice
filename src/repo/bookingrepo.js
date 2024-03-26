@@ -6,6 +6,7 @@ const {server}= require('../config/index')
 const {Flights} = require(`${server.FLIGHT_FILE}/models/index`);
 console.log(Flights);
 const error = require('../utils/common/error');
+const { bookingservice } = require("../service");
 class bookingclass extends CrudRepository{
     constructor(){
         super(booking)
@@ -21,6 +22,22 @@ class bookingclass extends CrudRepository{
            
         } catch (error) {
             throw error
+        }
+    }
+    async getone(data){
+        console.log(data);
+        try {
+            const user = await booking.findOne({
+                where:{
+                    userid:data.userid,
+                    flightid:data.flightid,
+                    totalcost:data.price
+                }
+            })
+            return user
+        } catch (error) {
+            throw error
+
         }
     }
 }

@@ -1,4 +1,5 @@
 module.exports={
     sucessresponse:require('./sucess'),
-    errorresponse:require('./error')
+    errorresponse:require('./error'),
+    queuetigger:require('./queue_trigger')
 }
